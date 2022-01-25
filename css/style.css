@@ -35,28 +35,27 @@
 
 .main {}
 
-.sky {
-   }
+.sky {}
 
 .cloud-1 {
     position: absolute;
     left: 594px;
     top: 193px;
-    animation: moveClouds1 25s linear infinite;
+    animation: moveClouds1 45s linear infinite;
 }
 
 .cloud-2 {
     position: absolute;
     left: 813px;
     top: 216px;
-    animation: moveClouds2 25s infinite linear;
+    animation: moveClouds2 55s infinite linear;
 }
 
 .cloud-3 {
     position: absolute;
     left: 875px;
     top: 228px;
-    animation: moveClouds3 20s infinite linear;
+    animation: moveClouds3 50s infinite linear;
 }
 
 .cloud-4 {
@@ -70,110 +69,150 @@
     position: absolute;
     left: 495px;
     top: 152px;
-    animation: moveClouds5 6s infinite linear;
+    animation: moveClouds5 60s ease infinite;
 }
 
 .cloud-6 {
     position: absolute;
     left: 190px;
     top: 26px;
-    animation: moveClouds6 90s infinite linear;
+    animation: moveClouds6 90s ease infinite;
 }
 
 .cloud-7 {
     position: absolute;
     left: 642px;
     top: 109px;
-    animation: moveClouds7 75s infinite linear;
+    animation: moveClouds7 35s ease infinite;
 }
 
 .cloud-8 {
     position: absolute;
     left: 938px;
     top: 56px;
-    animation: moveClouds8 75s infinite linear
+    animation: moveClouds8 25s ease infinite;
 }
 
 @keyframes moveClouds1 {
     0% {
         left: 594px;
-        opacity:1;
+        opacity: 1;
     }
+
     100% {
         left: 100%;
-        opacity:0;
+        opacity: 0;
     }
 }
+
 @keyframes moveClouds2 {
     0% {
         left: 813px;
-        opacity:1;
+        opacity: 1;
     }
+
     50% {
         left: 70%;
-        opacity:0;
+        opacity: 0;
     }
 }
+
 @keyframes moveClouds3 {
     0% {
         left: 875px;
-        opacity:1;
+        opacity: 1;
         top: 228px;
     }
+
     50% {
         left: 70%;
-        opacity:0;
+        opacity: 0;
     }
 }
+
 @keyframes moveClouds4 {
     0% {
         left: 1028px;
-        opacity:1;
+        opacity: 0.3;
     }
+
+    20% {
+        left: 1028px;
+        opacity: 1;
+    }
+
     100% {
         left: 100%;
-        top:125px;
-        opacity:0.3;
+        top: 125px;
+        opacity: 0.3;
     }
 }
+
 @keyframes moveClouds5 {
     0% {
         left: 495px;
-        opacity:1;
-        transform: scale(1) translate3d(-130px,100px,0)
+        opacity: 0.3;
+    }
+
+    20% {
+        left: 495px;
+        opacity: 1;
     }
 
     100% {
-        left: 0;
-        top:140px;
-        opacity:0;
-        transform: scale(0.5) translate3d(670px,100px,0)
+        left: 70%;
+        opacity: 0;
     }
 }
+
 @keyframes moveClouds6 {
-    from {
+    0% {
         left: 190px;
-
+        opacity: 0.2;
     }
-    to {
-        left: 100%;
 
+    20% {
+        left: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 80%;
+        opacity: 0;
     }
 }
+
 @keyframes moveClouds7 {
-    from {
+    0% {
         left: 642px;
+        opacity: 0;
     }
-    to {
-        left: 100%;
+
+    20% {
+        left: 50%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 80%;
+        opacity: 0;
     }
 }
+
 @keyframes moveClouds8 {
-    from {
+    0% {
         left: 938px;
+        opacity: 0;
     }
-    to {
+
+    20% {
+        left: 938px;
+        opacity: 1;
+    }
+
+    100% {
         left: 100%;
+        opacity: 0;
     }
 }
 
@@ -209,9 +248,11 @@
 
 .squirrel {
     position: absolute;
+    top: 338px;
+    left: 150px;
 }
 
-.squirrel-head {
+/* .squirrel-head {
     position: absolute;
     top: 338px;
     left: 205px;
@@ -233,6 +274,41 @@
 .squirrel-paws {
     position: absolute;
     top: 367px;
-    left: 200px;
+    left: 200px; */
+
+
+.flag {
+    position: absolute;
+    left: 430px;
+    top: 113px;
 }
 
+.boat {
+    position: absolute;
+    top: 333px;
+    right: 400px;
+}
+
+.bee {
+    position: absolute;
+    bottom: 272px;
+    right: 534px;
+}
+
+.shine {
+    position: absolute;
+    top: 220px;
+    right: 126px;
+}
+
+.glare {
+    position: absolute;
+    top: 280px;
+    left: 392px;
+}
+
+.plant {
+    position: absolute;
+    bottom: 137px;
+    left: 190px;
+}
