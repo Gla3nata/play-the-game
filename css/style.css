@@ -4,6 +4,7 @@
     height: 700px;
     margin: 0 auto;
     position: relative;
+    overflow: hidden;
 }
 
 .container::after {
@@ -18,43 +19,23 @@
 
 }
 
-/* 
-.top {
-    background: linear-gradient(90deg, rgb(245, 243, 179) 13%, rgb(210, 243, 202) 49%, rgb(117, 209, 210) 86%, rgb(106, 189, 185) 94%, rgb(95, 168, 159) 100%);
-    transform: rotate(-90deg);
-    width: 375px;
-
-    height: 1358px;
-    z-index: 2;
-    width: 100%;
-    height: 700px;
-    background-size: 100%;
-    background-repeat: no-repeat;
-
-} */
-
 .main {}
 
 .sky {}
 
-.cloud-1 {
+.cloud-1,
+    {
     position: absolute;
-    left: 594px;
-    top: 193px;
     animation: moveClouds1 45s linear infinite;
 }
 
 .cloud-2 {
     position: absolute;
-    left: 813px;
-    top: 216px;
     animation: moveClouds2 55s infinite linear;
 }
 
 .cloud-3 {
     position: absolute;
-    left: 875px;
-    top: 228px;
     animation: moveClouds3 50s infinite linear;
 }
 
@@ -62,7 +43,7 @@
     position: absolute;
     left: 1028px;
     top: 203px;
-    animation: moveClouds4 30s infinite linear;
+    animation: moveClouds4 50s infinite linear;
 }
 
 .cloud-5 {
@@ -76,7 +57,7 @@
     position: absolute;
     left: 190px;
     top: 26px;
-    animation: moveClouds6 90s ease infinite;
+    animation: moveClouds6 70s ease infinite;
 }
 
 .cloud-7 {
@@ -91,12 +72,14 @@
     left: 938px;
     top: 56px;
     animation: moveClouds8 25s ease infinite;
+    transition: 5s;
 }
 
 @keyframes moveClouds1 {
     0% {
-        left: 594px;
         opacity: 1;
+        left: 594px;
+        top: 193px;
     }
 
     100% {
@@ -107,26 +90,38 @@
 
 @keyframes moveClouds2 {
     0% {
-        left: 813px;
-        opacity: 1;
+        opacity: 0;
     }
 
     50% {
-        left: 70%;
+        opacity: 1;
+        top: 216px;
+        left: 813px;
+    }
+
+    100% {
+        left: 100%;
         opacity: 0;
+        top: 145;
     }
 }
 
 @keyframes moveClouds3 {
     0% {
         left: 875px;
-        opacity: 1;
         top: 228px;
+        opacity: 0;
     }
 
-    50% {
-        left: 70%;
+    40% {
+        left: 875px;
+        opacity: 1;
+    }
+
+    90% {
+        left: 100%;
         opacity: 0;
+        top: 145px;
     }
 }
 
@@ -167,17 +162,17 @@
 
 @keyframes moveClouds6 {
     0% {
-        left: 190px;
+        left: 0;
         opacity: 0.2;
     }
 
-    20% {
-        left: 50%;
+    25% {
+        left: 190px;
         opacity: 1;
     }
 
     100% {
-        left: 80%;
+        left: 100%;
         opacity: 0;
     }
 }
@@ -201,18 +196,20 @@
 
 @keyframes moveClouds8 {
     0% {
-        left: 938px;
+        transform: scale(1);
         opacity: 0;
     }
 
-    20% {
-        left: 938px;
+    50% {
+        transform: scale(1);
         opacity: 1;
     }
 
+
     100% {
-        left: 100%;
+        transform: scale(0.7);
         opacity: 0;
+        left: 80%;
     }
 }
 
@@ -252,31 +249,6 @@
     left: 150px;
 }
 
-/* .squirrel-head {
-    position: absolute;
-    top: 338px;
-    left: 205px;
-}
-
-.squirrel-body {
-    position: absolute;
-    top: 365px;
-    left: 175px;
-}
-
-.squirrel-tail {
-    position: absolute;
-    top: 340px;
-    left: 150px;
-}
-
-
-.squirrel-paws {
-    position: absolute;
-    top: 367px;
-    left: 200px; */
-
-
 .flag {
     position: absolute;
     left: 430px;
@@ -287,6 +259,21 @@
     position: absolute;
     top: 333px;
     right: 400px;
+    animation: moveBoat 5s ease infinite;
+}
+
+@keyframes moveBoat {
+    0% {
+        transform: skewY(5deg);
+    }
+
+    50% {
+        transform: skewY(0deg);
+    }
+
+    100% {
+        transform: skewY(5deg);
+    }
 }
 
 .bee {
@@ -311,4 +298,62 @@
     position: absolute;
     bottom: 137px;
     left: 190px;
+}
+
+.bubble {
+    background-image: -moz-radial-gradient(50% 50%, circle closest-side, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-image: -webkit-radial-gradient(50% 50%, circle closest-side, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    background-image: -ms-radial-gradient(50% 50%, circle closest-side, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 100%);
+    border-radius: 50%;
+    position: absolute;
+    z-index: 204;
+}
+
+.bubble1 {
+    left: 1002px;
+    top: 401px;
+    width: 5px;
+    height: 4px;
+    opacity: 0.471;
+}
+
+.bubble2 {
+    left: 1048px;
+    top: 407px;
+    width: 5px;
+    height: 4px;
+    opacity: 0.471;
+}
+
+.bubble3 {
+    left: 1009px;
+    top: 396px;
+    width: 5px;
+    height: 4px;
+    opacity: 0.471;
+}
+
+.bubble4 {
+    opacity: 0.2;
+    left: 987px;
+    top: 407px;
+    width: 9px;
+    height: 7px;
+}
+
+.bubble5 {
+    opacity: 0.2;
+    left: 1019px;
+    top: 404px;
+    width: 8px;
+    height: 7px;
+}
+
+
+.bubble6 {
+    opacity: 0.102;
+    left: 1029px;
+    top: 397px;
+    width: 11px;
+    height: 9px;
 }

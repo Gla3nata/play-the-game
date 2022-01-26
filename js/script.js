@@ -1,18 +1,17 @@
 let pos = 1;
 let boatPos = 1;
-beePos = 1
+let beePos = 1
 
 
 let timerId = setTimeout(function tick() {
-    tailMove();
-    boatMove();
+    flagMove();
     beeMove();
     squirrelMove();
     timerId = setTimeout(tick, 200);
 }, 200);
 
-function tailMove() {
-    let tailImg = document.getElementsByClassName('flag')[0].querySelector('img');
+function flagMove() {
+    let flagImg = document.getElementsByClassName('flag')[0].querySelector('img');
 
     if (pos == 7) {
         pos = 1;
@@ -20,20 +19,9 @@ function tailMove() {
         pos++;
     }
 
-    tailImg.src = 'img/flag-' + pos + '.png';
+    flagImg.src = 'img/flag-' + pos + '.png';
 }
 
-function boatMove() {
-    let boatImg = document.getElementsByClassName('boat')[0].querySelector('img');
-
-    if (boatPos == 3) {
-        boatPos = 1;
-    } else {
-        boatPos++;
-    }
-
-    boatImg.src = 'img/boat-' + boatPos + '.png';
-}
 
 function beeMove() {
     let beeImg = document.getElementsByClassName('bee')[0].querySelector('img');
